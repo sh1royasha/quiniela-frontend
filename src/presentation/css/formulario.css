@@ -1,0 +1,197 @@
+body {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 25px;
+}
+
+.card h2 {
+  color: #ffd700;
+
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+.form-group select {
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  font-size: 16px;
+}
+
+.btn-guardar {
+  margin-top: 25px;
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ffd700;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-guardar:hover {
+  transform: translateY(-2px);
+}
+
+.grupo-card {
+  margin-bottom: 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.grupo-card summary {
+  cursor: pointer;
+
+  padding: 18px 20px;
+
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  color: #ffd700;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  user-select: none;
+
+  list-style: none;
+}
+
+.grupo-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.grupo-card summary::before {
+  content: "▶";
+
+  margin-right: 10px;
+
+  transition: 0.3s;
+}
+
+.grupo-card[open] summary::before {
+  content: "▼";
+}
+
+.grupo-contenido {
+  padding: 15px;
+}
+
+.partido {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px;
+
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.equipos {
+  color: white;
+
+  display: flex;
+
+  gap: 10px;
+
+  font-weight: 600;
+
+  flex-wrap: wrap;
+}
+
+.vs {
+  color: #ffd700;
+}
+
+.marcador {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.marcador input {
+  width: 55px;
+
+  height: 40px;
+
+  text-align: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+.marcador span {
+  color: white;
+
+  font-size: 20px;
+}

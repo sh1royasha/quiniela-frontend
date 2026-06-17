@@ -1,0 +1,197 @@
+@import url("./layout.css");
+@import url("./sidebar.css");
+@import url("./pronosticos.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+
+header p {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.sidebar {
+  width: 320px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.usuarios {
+  padding: 15px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.usuario-card {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.usuario-card:hover {
+  background: #ffd700;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.usuarios::-webkit-scrollbar {
+  width: 8px;
+}
+
+.usuarios::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.usuarios::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 10px;
+}
+
+.usuarios::-webkit-scrollbar-thumb:hover {
+  background: #ffea70;
+}
+
+.content {
+  flex: 1;
+  padding: 25px;
+  overflow: auto;
+}
+
+.content-header {
+  margin-bottom: 25px;
+}
+
+.content-header h2 {
+  color: #ffd700;
+}
+
+.pronosticos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pronostico-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partido {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.resultado {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffd700;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.grupo-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.grupo-card summary {
+  cursor: pointer;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+  list-style: none;
+}
+
+.grupo-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.grupo-card summary::before {
+  content: "⚽ ";
+}
+
+.grupo-contenido {
+  padding: 15px;
+}
+
+.partido-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.partido-item:last-child {
+  border-bottom: none;
+}
+
+.resultado {
+  color: #ffd700;
+  font-weight: bold;
+}
